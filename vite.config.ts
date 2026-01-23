@@ -4,6 +4,7 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+  base: "/Elsayed_kouta_portfolio/",
   plugins: [
     react(),
     runtimeErrorOverlay(),
