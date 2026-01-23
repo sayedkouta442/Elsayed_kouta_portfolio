@@ -8,8 +8,10 @@ import Home from "@/pages/Home";
 import NotFound from "@/pages/not-found";
 
 function Router() {
+  const base = "/Elsayed_kouta_portfolio";
   return (
     <Switch>
+      <Route path="${base}/" component={Home} />
       <Route path="/" component={Home} />
       <Route component={NotFound} />
     </Switch>
