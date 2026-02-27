@@ -15,7 +15,7 @@ export const projects = [
     imageUrl: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80&w=800",
     tags: ["Flutter", "Supabase", "MVVM", "FCM"],
     repoUrl: null,
-    demoUrl: "https://play.google.com/coming-soon#coming-soon"
+    demoUrl: "https://play.google.com/store/apps/details?id=io.bookchange.app"
   },
   {
     id: 3,
@@ -34,5 +34,14 @@ export const projects = [
     tags: ["Flutter", "ML Kit", "OpenStreetMap", "Clean Arch", "Cubit"],
     repoUrl: "https://github.com/sayedkouta442/attendance_appp",
     demoUrl: "https://www.linkedin.com/posts/elsayed-kouta-7183b8336_hrtech-workforcemanagement-futureofwork-activity-7357692772495097857-aAra?utm_source=share&utm_medium=member_android&rcm=ACoAAFRruQQBH4BDYhL_UCorCfYA9R_w_MKqTNM"
+  },
+  {
+    id: 5,
+    title: "Movies Discovery – TMDb Integration",
+    description: "Flutter app built with Clean Architecture and Cubit, using repository pattern, pagination, and Hive caching. Includes authentication, categorized browsing, and persistent favorites/watchlist.",
+    imageUrl: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80&w=800",
+    tags: ["Flutter", "Dart", "TMDB API", "Cubit", "Clean Arch", "Hive"],
+    repoUrl: "https://github.com/sayedkouta442/movie_app",
+    demoUrl: "https://www.linkedin.com/posts/elsayed-kouta-7183b8336_proud-to-share-a-project-ive-been-working-activity-7328858273585991680-22Jn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFRruQQBH4BDYhL_UCorCfYA9R_w_MKqTNM"
   }
 ];

@@ -151,19 +151,17 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-24 bg-secondary/20 border-y border-border/50">
         <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
             {/* Image/Visual Side */}
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative"
+              className="relative lg:sticky lg:top-28"
             >
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-purple-500/20 rounded-2xl blur-2xl opacity-50" />
               <div className="relative aspect-square rounded-2xl overflow-hidden bg-card border border-border">
-                {/* Descriptive comment for Unsplash URL */}
-                {/* coding setup minimalist workspace dark mode */}
                 <img 
                   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" 
                   alt="Workspace" 
@@ -178,84 +176,115 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+              className="space-y-10"
             >
-              <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
-                Behind the <span className="text-primary">Code</span>
-              </h2>
-              <div className="space-y-6 text-lg text-muted-foreground">
-                <p>
-                  I'm Elsayed Kouta, a Flutter developer with hands-on experience building mobile applications using Dart and Flutter. 
-                  I am skilled in API integration, state management, and creating clean, user-friendly interfaces.
+              <div>
+                <h2 className="text-3xl md:text-5xl font-bold font-display mb-4">
+                  Behind the <span className="text-primary">Code</span>
+                </h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Flutter developer with experience building and publishing mobile applications on Google Play. Skilled in clean
+                  architecture, MVVM, Bloc/Cubit state management, and integrating REST APIs, Supabase, and Firebase.
+                  Experienced in offline-first apps, real-time features, geolocation, payment integration, and performance
+                  optimization.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
-                  <div className="space-y-6">
+              </div>
+
+              {/* Experience */}
+              <div>
+                <h3 className="text-lg font-bold font-display text-foreground mb-5 flex items-center gap-2">
+                  <span className="w-1 h-5 bg-primary rounded-full inline-block" />
+                  Experience
+                </h3>
+                <div className="space-y-6">
+                  <div className="relative pl-5 border-l-2 border-primary/30">
+                    <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary" />
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+                      <p className="font-semibold text-foreground">Self-Employed · Flutter Developer</p>
+                      <span className="text-xs text-muted-foreground bg-secondary px-2.5 py-1 rounded-full">2024 – Present</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Released 2 apps on Google Play using Clean Architecture & MVVM. Integrated Supabase for authentication,
+                      realtime database, storage, and REST APIs. Implemented push notifications and offline-first features with Drift & Hive.
+                    </p>
+                  </div>
+                  <div className="relative pl-5 border-l-2 border-border/50">
+                    <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-muted-foreground/50" />
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+                      <p className="font-semibold text-foreground">ACS · Flutter Developer</p>
+                      <span className="text-xs text-muted-foreground bg-secondary px-2.5 py-1 rounded-full">Short-term, Aug 2025</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Developed an e-commerce tools rental app using MVVM architecture and Cubit state management,
+                      integrating REST APIs and building a fully responsive UI.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Skills */}
+              <div>
+                <h3 className="text-lg font-bold font-display text-foreground mb-5 flex items-center gap-2">
+                  <span className="w-1 h-5 bg-primary rounded-full inline-block" />
+                  Technical Skills
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="space-y-5">
                     <div>
-                      <h4 className="font-bold text-foreground mb-3 text-lg flex items-center gap-2">
-                        <Smartphone className="w-5 h-5 text-primary" />
-                        Frameworks & UI
+                      <h4 className="font-bold text-foreground mb-2 text-sm flex items-center gap-2">
+                        <Smartphone className="w-4 h-4 text-primary" />
+                        Frameworks & Languages
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        Flutter, Dart, C++, Java. Specialized in Responsive UI and Adaptive Layouts for all screen sizes.
-                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Flutter, Dart, C++, Java</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-foreground mb-3 text-lg flex items-center gap-2">
-                        <Layers className="w-5 h-5 text-primary" />
-                        Architecture
+                      <h4 className="font-bold text-foreground mb-2 text-sm flex items-center gap-2">
+                        <Layers className="w-4 h-4 text-primary" />
+                        Architecture & State
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        Clean Architecture, MVVM, Bloc, Cubit for scalable and professional codebases.
-                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Clean Architecture, MVVM, Bloc, Cubit</p>
                     </div>
                   </div>
                   
-                  <div className="space-y-6">
+                  <div className="space-y-5">
                     <div>
-                      <h4 className="font-bold text-foreground mb-3 text-lg flex items-center gap-2">
-                        <Zap className="w-5 h-5 text-primary" />
-                        Features & APIs
+                      <h4 className="font-bold text-foreground mb-2 text-sm flex items-center gap-2">
+                        <Zap className="w-4 h-4 text-primary" />
+                        Networking
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        Real-time Chats, Push Notifications, Google Maps, Location Services, RESTful APIs, Dio, Retrofit.
-                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">RESTful APIs, Dio, HTTP, Retrofit</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-foreground mb-3 text-lg flex items-center gap-2">
-                        <Database className="w-5 h-5 text-primary" />
+                      <h4 className="font-bold text-foreground mb-2 text-sm flex items-center gap-2">
+                        <Database className="w-4 h-4 text-primary" />
                         Backend & Storage
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        Firebase, Supabase, Hive, Shared Preferences, Sqflite.
-                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Firebase, Supabase, Hive, Shared Preferences, sqflite</p>
                     </div>
                   </div>
 
-                  <div className="space-y-6">
+                  <div className="space-y-5">
                     <div>
-                      <h4 className="font-bold text-foreground mb-3 text-lg flex items-center gap-2">
-                        <Shield className="w-5 h-5 text-primary" />
-                        Tools & Concepts
+                      <h4 className="font-bold text-foreground mb-2 text-sm flex items-center gap-2">
+                        <Shield className="w-4 h-4 text-primary" />
+                        Tools & DevOps
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        Git, GitHub, CI/CD (GitHub Actions), Flutter Flavors, OOP, SOLID Principles, Design Patterns.
-                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Git, GitHub, CI/CD (GitHub Actions), Flutter Flavors, OOP, SOLID, Design Patterns</p>
                     </div>
                     <div>
-                      <h4 className="font-bold text-foreground mb-3 text-lg flex items-center gap-2">
-                        <Smartphone className="w-5 h-5 text-primary" />
+                      <h4 className="font-bold text-foreground mb-2 text-sm flex items-center gap-2">
+                        <Smartphone className="w-4 h-4 text-primary" />
                         Deployment
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        Expertise in Google Play Store deployment and release management.
-                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">Google Play Store deployment & release management</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-10">
+              <div>
                 <a href="https://drive.google.com/file/d/1F_SWAux9zO4MafHXlaQiyIElPE8SfwjM/view?usp=drive_link" target="_blank" rel="noreferrer">
-                  <Button className="h-12 px-8 rounded-full bg-white text-black hover:bg-gray-200 font-semibold gap-2">
+                  <Button className="h-12 px-8 rounded-full bg-primary hover:bg-primary/90 text-white font-semibold gap-2.5 shadow-lg shadow-primary/25 transition-all duration-200 hover:scale-105">
                     <FileDown className="h-5 w-5" />
                     Download CV
                   </Button>
